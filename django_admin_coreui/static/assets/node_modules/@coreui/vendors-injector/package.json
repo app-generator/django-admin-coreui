@@ -1,0 +1,21 @@
+{
+  "name": "@coreui/vendors-injector",
+  "version": "1.1.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lukasz Holeczek",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^10.0.0",
+    "js-beautify": "^1.13.13",
+    "jsdom": "^16.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/@coreui/coreui-vendors-injector.git"
+  }
+}
