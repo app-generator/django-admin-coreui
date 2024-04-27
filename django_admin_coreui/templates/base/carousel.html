@@ -1,13 +1,13 @@
 {% extends 'layouts/base.html' %}
 
 
-{% block body %}
+{% block content %}
   
 
   
     <div class="wrapper d-flex flex-column min-vh-100">
       <header class="header header-sticky p-0 mb-4">
-        {% include 'layouts/navbar.html' %}
+        {% include 'includes/navbar.html' %}
         <div class="container-fluid px-4">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb my-0">
@@ -25,7 +25,7 @@
       </header>
       <div class="body flex-grow-1">
         <div class="container-lg px-4">
-          {% include 'layouts/topbar.html' %}
+          {% include 'includes/topbar.html' %}
           <div class="card mb-4">
             <div class="card-header"><strong>Carousel</strong><span class="small ms-1">Slides only</span></div>
             <div class="card-body">
@@ -365,4 +365,4 @@
       </footer>
     </div>
    
-    {% endblock body %}
+    {% endblock content %}

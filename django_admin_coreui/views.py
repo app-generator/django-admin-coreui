@@ -4,7 +4,9 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 
-
+from django.contrib.auth.views import LoginView, PasswordResetView, PasswordChangeView, PasswordResetConfirmView
+from django_admin_coreui.forms import RegistrationForm, LoginForm, UserPasswordResetForm, UserSetPasswordForm, UserPasswordChangeForm
+from django.views.generic import CreateView
 
 # Create your views here.
 
@@ -206,53 +208,31 @@ def toasts(request):
 
 
 #auth 
+class UserRegistrationView(CreateView):
+  template_name = 'accounts/register.html'
+  form_class = RegistrationForm
+  success_url = '/login'
 
-def register(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        confirm_password = request.POST.get('confirm_password')
-        if password == confirm_password:
-           
-            if User.objects.filter(username=username).exists():
-                return render(request, 'register.html', {'error_message': 'Username already exists'})
-           
-            if User.objects.filter(email=email).exists():
-                return render(request, 'register.html', {'error_message': 'Email already exists'})
-           
-            user = User.objects.create_user(username=username, email=email, password=password)
-           
-            return redirect('login')  
-        else:
-            return render(request, 'register.html', {'error_message': 'Passwords do not match'})
-    else:
-        return render(request, 'register.html')
-    
+class UserLoginView(LoginView):
+  template_name = 'accounts/login.html'
+  form_class = LoginForm
 
-def login(request):
-    if request.method == 'POST':
-        error_message = None
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            auth_login(request, user)
-            return redirect('index')
-        else:
-            error_message = 'Invalid credentials'
-            return render(request, 'login.html', {'error_message': error_message})
-    return render(request, 'login.html')
+class UserPasswordResetView(PasswordResetView):
+  template_name = 'accounts/password-reset.html'
+  form_class = UserPasswordResetForm
 
+class UserPasswrodResetConfirmView(PasswordResetConfirmView):
+  template_name = 'accounts/password-reset-confirm.html'
+  form_class = UserSetPasswordForm
+
+class UserPasswordChangeView(PasswordChangeView):
+  template_name = 'accounts/change-password.html'
+  form_class = UserPasswordChangeForm
 
 
 def logout_view(request):
-    logout(request)
-    return redirect('index')
-
-
-
-
+  logout(request)
+  return redirect('/accounts/login/')
 
 def custom_404(request, exception):
     return render(request, '404.html', status=404)

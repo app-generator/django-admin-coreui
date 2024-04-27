@@ -171,17 +171,27 @@
             <span class="badge badge-sm bg-primary ms-2">42</span>
           </a>
 
-          <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
-           
-            <svg   class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-              <title>lock-locked</title>
-              <path d="M18 9.375v-2.625c0-3.314-2.686-6-6-6s-6 2.686-6 6v0 2.625h-1.875v6c0 4.342 3.533 7.875 7.875 7.875s7.875-3.533 7.875-7.875v-6zM7.5 6.75c0-2.485 2.015-4.5 4.5-4.5s4.5 2.015 4.5 4.5v0 2.625h-9zM18.375 15.375c0 3.515-2.86 6.375-6.375 6.375s-6.375-2.86-6.375-6.375v-4.5h12.75z"></path>
+          <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <svg   class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <title>lock-locked</title>
+                <path d="M18 9.375v-2.625c0-3.314-2.686-6-6-6s-6 2.686-6 6v0 2.625h-1.875v6c0 4.342 3.533 7.875 7.875 7.875s7.875-3.533 7.875-7.875v-6zM7.5 6.75c0-2.485 2.015-4.5 4.5-4.5s4.5 2.015 4.5 4.5v0 2.625h-9zM18.375 15.375c0 3.515-2.86 6.375-6.375 6.375s-6.375-2.86-6.375-6.375v-4.5h12.75z"></path>
               </svg>
+              Lock Account
+            </a>
 
-             Lock Account</a>
+            {% if user.is_authenticated %}
+            <a class="dropdown-item" href="{% url "password_change" %}">
+              <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <title>lock-locked</title>
+                <path d="M18 9.375v-2.625c0-3.314-2.686-6-6-6s-6 2.686-6 6v0 2.625h-1.875v6c0 4.342 3.533 7.875 7.875 7.875s7.875-3.533 7.875-7.875v-6zM7.5 6.75c0-2.485 2.015-4.5 4.5-4.5s4.5 2.015 4.5 4.5v0 2.625h-9zM18.375 15.375c0 3.515-2.86 6.375-6.375 6.375s-6.375-2.86-6.375-6.375v-4.5h12.75z"></path>
+              </svg>
+              Change Password
+            </a>
+            {% endif %}
             
             {% if user.is_authenticated %}
-            <a class="dropdown-item" href="{% url 'logout' %}">
+            <a class="dropdown-item" href="{% if request.user.is_superuser %} {% url 'admin:logout' %} {% else %} {% url 'logout' %} {% endif %}">
                 <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <title>account-logout</title>
                   <path d="M3.617 12.752l12.872-0v-1.5h-12.872l3.518-3.518-1.061-1.061-5.329 5.329 5.329 5.329 1.061-1.061-3.518-3.518z"></path>
