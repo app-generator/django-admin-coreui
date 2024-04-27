@@ -211,7 +211,7 @@ def toasts(request):
 class UserRegistrationView(CreateView):
   template_name = 'accounts/register.html'
   form_class = RegistrationForm
-  success_url = '/login'
+  success_url = '/accounts/login/'
 
 class UserLoginView(LoginView):
   template_name = 'accounts/login.html'
