@@ -8,11 +8,11 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
 name='django-admin-coreui',
-version='0.0.6',
+version='1.0.0',
 zip_safe=False,
 packages=find_packages(),
 include_package_data=True,
-description='Modern template for Django admin interface',
+description='Modern template for Django admin interface using CoreUI Components',
 long_description=README,
 long_description_content_type="text/markdown",
 url='https://appseed.us/product/coreui/django/',

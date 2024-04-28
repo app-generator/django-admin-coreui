@@ -1,5 +1,0 @@
-include LICENSE
-include README.rst
-recursive-include admin_coreui/static *
-recursive-include admin_coreui/templates *
-recursive-include docs *

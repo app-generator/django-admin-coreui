@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [1.0.0] 2024-04-28
+### Changes
+
+- Update Auth Pages (minor)
+- Added Footer Component & Edit Links
+
 ## [0.0.6] 2024-04-28
 ### Changes
 
