@@ -1,0 +1,42 @@
+{% load static %}
+
+<!-- CoreUI and necessary plugins-->
+<script src=" {% static 'vendors/@coreui/coreui/js/coreui.bundle.min.js' %}"></script>
+<script src="{% static 'vendors/simplebar/js/simplebar.min.js' %}"></script>
+<script>
+    const header = document.querySelector('header.header');
+
+    document.addEventListener('scroll', () => {
+    if (header) {
+        header.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
+    }
+    });
+</script>
+<!-- Plugins and scripts required by this view-->
+<script src="{% static 'vendors/chart.js/js/chart.umd.js' %}"></script>
+<script src="{% static 'vendors/@coreui/chartjs/js/coreui-chartjs.js' %}"></script>
+<script src="{% static 'vendors/@coreui/utils/js/index.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/charts.js' %}"></script>
+<script src="{% static 'js/charts.js.map' %}"></script>
+<script src="{% static 'js/color-modes.js' %}"></script>
+<script src="{% static 'js/color-modes.js.map' %}"></script>
+<script src="{% static 'js/colors.js' %}"></script>
+
+<script src="{% static 'js/colors.js.map' %}"></script>
+
+<script src="{% static 'js/config.js' %}"></script>
+
+<script src="{% static 'js/config.js.map' %}"></script>
+
+<script src="{% static 'js/main.js.map' %}"></script>
+
+<script src="{% static 'js/popovers.js' %}"></script>
+<script src="{% static 'js/popovers.js.map' %}"></script>
+<script src="{% static 'js/toasts.js' %}"></script>
+<script src="{% static 'js/toasts.js.map' %}"></script>
+<script src="{% static 'js/tooltips.js' %}"></script>
+<script src="{% static 'js/tooltips.js.map' %}"></script>
+<script src="{% static 'js/widgets.js' %}"></script>
+<script src="{% static 'js/widgets.js.map' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@coreui/icons@3.0.1/dist/cjs/index.min.js"></script>

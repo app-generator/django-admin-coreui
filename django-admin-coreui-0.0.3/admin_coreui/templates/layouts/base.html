@@ -1,0 +1,27 @@
+<!DOCTYPE html><!--
+  * CoreUI - Free Bootstrap Admin Template
+  * @version v5.0.0
+  * @link https://coreui.io/product/free-bootstrap-admin-template/
+  * Copyright (c) 2024 creativeLabs Łukasz Holeczek
+  * Licensed under MIT (https://github.com/coreui/coreui-free-bootstrap-admin-template/blob/main/LICENSE)
+  -->
+{% load i18n static admin_coreui %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% get_direction as direction %}
+{% get_admin_setting as admin_setting %}
+<html lang="en">
+    <head>
+      {% include "includes/head.html" %}
+      {% block extrahead %}{% endblock extrahead %}
+      {% block extra_css %}{% endblock extra_css %}
+    </head>
+    <body>
+      {% include 'includes/sidebar.html' %}
+      {% block content %}{% endblock content %}
+
+      {% include "includes/scripts.html" %}
+      {% block extra_js %} {% endblock extra_js %}
+        
+    </body>
+</html>

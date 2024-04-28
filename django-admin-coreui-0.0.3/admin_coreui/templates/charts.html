@@ -1,0 +1,232 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper d-flex flex-column min-vh-100">
+  <header class="header header-sticky p-0 mb-4">
+    {% include 'includes/navbar.html' %}
+    <div class="container-fluid px-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb my-0">
+          <li class="breadcrumb-item"><a href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item"><span>Plugins</span>
+          </li>
+          <li class="breadcrumb-item active"><span>Charts</span>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <div class="body flex-grow-1">
+    <div class="container-lg px-4">
+      {% include 'includes/topbar.html' %}
+      <div class="row row-cols-2">
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-header"><strong>Chart</strong><span class="small ms-1">Line</span></div>
+            <div class="card-body">
+              <div class="example">
+                <ul class="nav nav-underline-border" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1000" role="tab">
+                      <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <title>media-play</title>
+                        <path d="M20.831 11.027l-14.631-8.709c-0.164-0.1-0.363-0.158-0.576-0.158-0.621 0-1.125 0.504-1.125 1.125v0 17.069c0 0 0 0 0 0 0 0.621 0.504 1.125 1.125 1.125 0.205 0 0.398-0.055 0.564-0.151l-0.005 0.003 14.629-8.36c0.341-0.198 0.567-0.561 0.567-0.977 0-0.409-0.218-0.767-0.544-0.964l-0.005-0.003zM6 19.708v-15.764l13.511 8.043z"></path>
+                        </svg>
+                      Preview
+                    
+                    </a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://www.chartjs.org/"  target="_blank">
+                      <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <title>code</title>
+                        <path d="M18.22 5.54l-1.184 0.921 4.306 5.537-4.309 5.542 1.184 0.921 5.025-6.463-5.022-6.458z"></path>
+                        <path d="M5.783 5.54l-5.025 6.46 5.022 6.461 1.184-0.921-4.306-5.54 4.309-5.539-1.184-0.921z"></path>
+                        <path d="M8.364 23.25h1.545l5.584-22.5h-1.545l-5.584 22.5z"></path>
+                        </svg>
+                      Code</a></li>
+                </ul>
+                <div class="tab-content rounded-bottom">
+                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1000">
+                    <div class="c-chart-wrapper">
+                      <canvas id="canvas-1"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-header"><strong>Chart</strong><span class="small ms-1">Bar</span></div>
+            <div class="card-body">
+              <div class="example">
+                <ul class="nav nav-underline-border" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1001" role="tab">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>media-play</title>
+                      <path d="M20.831 11.027l-14.631-8.709c-0.164-0.1-0.363-0.158-0.576-0.158-0.621 0-1.125 0.504-1.125 1.125v0 17.069c0 0 0 0 0 0 0 0.621 0.504 1.125 1.125 1.125 0.205 0 0.398-0.055 0.564-0.151l-0.005 0.003 14.629-8.36c0.341-0.198 0.567-0.561 0.567-0.977 0-0.409-0.218-0.767-0.544-0.964l-0.005-0.003zM6 19.708v-15.764l13.511 8.043z"></path>
+                      </svg>
+                      Preview</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://www.chartjs.org/" target="_blank">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>code</title>
+                      <path d="M18.22 5.54l-1.184 0.921 4.306 5.537-4.309 5.542 1.184 0.921 5.025-6.463-5.022-6.458z"></path>
+                      <path d="M5.783 5.54l-5.025 6.46 5.022 6.461 1.184-0.921-4.306-5.54 4.309-5.539-1.184-0.921z"></path>
+                      <path d="M8.364 23.25h1.545l5.584-22.5h-1.545l-5.584 22.5z"></path>
+                      </svg>
+                      Code</a></li>
+                </ul>
+                <div class="tab-content rounded-bottom">
+                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1001">
+                    <div class="c-chart-wrapper">
+                      <canvas id="canvas-2"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-header"><strong>Chart</strong><span class="small ms-1">Doughnut</span></div>
+            <div class="card-body">
+              <div class="example">
+                <ul class="nav nav-underline-border" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1002" role="tab">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>media-play</title>
+                      <path d="M20.831 11.027l-14.631-8.709c-0.164-0.1-0.363-0.158-0.576-0.158-0.621 0-1.125 0.504-1.125 1.125v0 17.069c0 0 0 0 0 0 0 0.621 0.504 1.125 1.125 1.125 0.205 0 0.398-0.055 0.564-0.151l-0.005 0.003 14.629-8.36c0.341-0.198 0.567-0.561 0.567-0.977 0-0.409-0.218-0.767-0.544-0.964l-0.005-0.003zM6 19.708v-15.764l13.511 8.043z"></path>
+                      </svg>
+                      Preview</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://www.chartjs.org/" target="_blank">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>code</title>
+                      <path d="M18.22 5.54l-1.184 0.921 4.306 5.537-4.309 5.542 1.184 0.921 5.025-6.463-5.022-6.458z"></path>
+                      <path d="M5.783 5.54l-5.025 6.46 5.022 6.461 1.184-0.921-4.306-5.54 4.309-5.539-1.184-0.921z"></path>
+                      <path d="M8.364 23.25h1.545l5.584-22.5h-1.545l-5.584 22.5z"></path>
+                      </svg>
+                      Code</a></li>
+                </ul>
+                <div class="tab-content rounded-bottom">
+                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1002">
+                    <div class="c-chart-wrapper">
+                      <canvas id="canvas-3"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-header"><strong>Chart</strong><span class="small ms-1">Radar</span></div>
+            <div class="card-body">
+              <div class="example">
+                <ul class="nav nav-underline-border" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1003" role="tab">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>media-play</title>
+                      <path d="M20.831 11.027l-14.631-8.709c-0.164-0.1-0.363-0.158-0.576-0.158-0.621 0-1.125 0.504-1.125 1.125v0 17.069c0 0 0 0 0 0 0 0.621 0.504 1.125 1.125 1.125 0.205 0 0.398-0.055 0.564-0.151l-0.005 0.003 14.629-8.36c0.341-0.198 0.567-0.561 0.567-0.977 0-0.409-0.218-0.767-0.544-0.964l-0.005-0.003zM6 19.708v-15.764l13.511 8.043z"></path>
+                      </svg>
+                      Preview</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://www.chartjs.org/" target="_blank">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>code</title>
+                      <path d="M18.22 5.54l-1.184 0.921 4.306 5.537-4.309 5.542 1.184 0.921 5.025-6.463-5.022-6.458z"></path>
+                      <path d="M5.783 5.54l-5.025 6.46 5.022 6.461 1.184-0.921-4.306-5.54 4.309-5.539-1.184-0.921z"></path>
+                      <path d="M8.364 23.25h1.545l5.584-22.5h-1.545l-5.584 22.5z"></path>
+                      </svg>
+                      Code</a></li>
+                </ul>
+                <div class="tab-content rounded-bottom">
+                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1003">
+                    <div class="c-chart-wrapper">
+                      <canvas id="canvas-4"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-header"><strong>Chart</strong><span class="small ms-1">Pie</span></div>
+            <div class="card-body">
+              <div class="example">
+                <ul class="nav nav-underline-border" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1004" role="tab">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>media-play</title>
+                      <path d="M20.831 11.027l-14.631-8.709c-0.164-0.1-0.363-0.158-0.576-0.158-0.621 0-1.125 0.504-1.125 1.125v0 17.069c0 0 0 0 0 0 0 0.621 0.504 1.125 1.125 1.125 0.205 0 0.398-0.055 0.564-0.151l-0.005 0.003 14.629-8.36c0.341-0.198 0.567-0.561 0.567-0.977 0-0.409-0.218-0.767-0.544-0.964l-0.005-0.003zM6 19.708v-15.764l13.511 8.043z"></path>
+                      </svg>
+                      Preview</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://www.chartjs.org/" target="_blank">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>code</title>
+                      <path d="M18.22 5.54l-1.184 0.921 4.306 5.537-4.309 5.542 1.184 0.921 5.025-6.463-5.022-6.458z"></path>
+                      <path d="M5.783 5.54l-5.025 6.46 5.022 6.461 1.184-0.921-4.306-5.54 4.309-5.539-1.184-0.921z"></path>
+                      <path d="M8.364 23.25h1.545l5.584-22.5h-1.545l-5.584 22.5z"></path>
+                      </svg>
+                      Code</a></li>
+                </ul>
+                <div class="tab-content rounded-bottom">
+                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1004">
+                    <div class="c-chart-wrapper">
+                      <canvas id="canvas-5"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4">
+            <div class="card-header"><strong>Chart</strong><span class="small ms-1">Polar Area</span></div>
+            <div class="card-body">
+              <div class="example">
+                <ul class="nav nav-underline-border" role="tablist">
+                  <li class="nav-item"><a class="nav-link active" data-coreui-toggle="tab" href="#preview-1005" role="tab">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>media-play</title>
+                      <path d="M20.831 11.027l-14.631-8.709c-0.164-0.1-0.363-0.158-0.576-0.158-0.621 0-1.125 0.504-1.125 1.125v0 17.069c0 0 0 0 0 0 0 0.621 0.504 1.125 1.125 1.125 0.205 0 0.398-0.055 0.564-0.151l-0.005 0.003 14.629-8.36c0.341-0.198 0.567-0.561 0.567-0.977 0-0.409-0.218-0.767-0.544-0.964l-0.005-0.003zM6 19.708v-15.764l13.511 8.043z"></path>
+                      </svg>
+                      Preview</a></li>
+                  <li class="nav-item"><a class="nav-link" href="http://www.chartjs.org/" target="_blank">
+                    <svg class="icon me-2" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <title>code</title>
+                      <path d="M18.22 5.54l-1.184 0.921 4.306 5.537-4.309 5.542 1.184 0.921 5.025-6.463-5.022-6.458z"></path>
+                      <path d="M5.783 5.54l-5.025 6.46 5.022 6.461 1.184-0.921-4.306-5.54 4.309-5.539-1.184-0.921z"></path>
+                      <path d="M8.364 23.25h1.545l5.584-22.5h-1.545l-5.584 22.5z"></path>
+                      </svg>
+                      Code</a></li>
+                </ul>
+                <div class="tab-content rounded-bottom">
+                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1005">
+                    <div class="c-chart-wrapper">
+                      <canvas id="canvas-6"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer px-4">
+    <div><a href="https://coreui.io">CoreUI </a><a href="https://coreui.io/product/free-bootstrap-admin-template/">Bootstrap Admin Template</a> © 2024 creativeLabs.</div>
+    <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+  </footer>
+</div>
+
+
+{% endblock content %}
+  
+ 
