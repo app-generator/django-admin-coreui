@@ -1,6 +1,7 @@
 from django.apps import AppConfig
 
 
-class DjangoAdminCoreuiConfig(AppConfig):
+class AdminCoreuiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'django_admin_coreui'
+    name = 'admin_coreui'
+    icon = 'fa fa-user'
