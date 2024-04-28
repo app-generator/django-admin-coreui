@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [0.0.5] 2024-04-28
+### Changes
+
+- Added LICENSE
+
 ## [0.0.4] 2024-04-28
 ### Changes
 
