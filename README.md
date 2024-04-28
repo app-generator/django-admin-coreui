@@ -8,9 +8,9 @@ Modern template for **Django Admin Interface** coded on top of **[CoreUI](https:
 
 **Links & Resources**
 
-- [Django CoreUI](https://appseed.us/product/adminlte/django/) - `Product` that uses the library
+- [Django CoreUI](https://appseed.us/product/coreui/django/) - `Product` that uses the library
   - `Features`: Fully-configured, `CI/CD` via Render
-- UI Kit: `AdminLTE` by ColorLib **v3.2.0**
+- UI Kit: `CoreUI`
 - **Sections Covered**: 
   - `Admin Section`, reserved for `superusers`
   - `All pages` managed by `Django.contrib.AUTH`
