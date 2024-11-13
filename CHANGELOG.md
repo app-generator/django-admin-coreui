@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [1.0.3] 2024-11-13
+### Changes
+
+- Update RM Links:
+  - [Django Admin CoreUI](https://app-generator.dev/docs/products/django-libs/theme-coreui.html) - Documentation & Support Links
+  - [Django CoreUI](https://app-generator.dev/product/coreui/django/) - The product that uses the library
+  - [Getting Started with Django](https://app-generator.dev/docs/technologies/django/index.html) - Learn how to code **Django** Projects
+
 ## [1.0.2] 2024-04-28
 ### Changes
 
